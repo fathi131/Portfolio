@@ -220,3 +220,42 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+
+function validation() {
+  const name = document.getElementById("name-field");
+  const email = document.getElementById("email-field");
+  const subject = document.getElementById("subject-field");
+  const message = document.getElementById("message-field");
+  const hai = document.getElementById("message-container");
+
+  if (name.value.trim() === "") {
+    hai.innerHTML = "Please enter your name.";
+    name.focus();
+    return false;
+  }
+  if (email.value.trim() === "") {
+    hai.innerHTML = "Please enter your email.";
+    email.focus();
+    return false;
+  }
+  if (subject.value.trim() === "") {
+    hai.innerHTML = "Please enter the subject.";
+    subject.focus();
+    return false;
+  }
+  if (message.value.trim() === "") {
+    hai.innerHTML = "Please enter your message.";
+    message.focus();
+    return false;
+  }
+
+  hai.innerHTML = ""; 
+  return true;
+}
+
+
+
+
